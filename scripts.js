@@ -1,4 +1,5 @@
 var divs = ["#rec0", "#rec1", "#rec2", "#rec3", "#rec4", "#rec5", "#rec6", "#rec7", "#rec8", "#rec9"];
+var hexNums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
 
 function moveRec(pos, recNum) {
     var rec = document.getElementById("#rec" + recNum.toString());
@@ -94,6 +95,19 @@ function setColour(){
     var textBox = document.getElementById("#colorInput").value;
 
     for (var i = 0; i < 10; i++){
+        document.getElementById(divs[i]).style.backgroundColor = textBox;
+    }
+}
+
+function randomizeColour(){
+
+    var textBox = "#";
+    for (var i = 0; i < 10; i++){
+            textBox = "#";
+            for(var j = 0; j < 6; j++){
+                textBox = textBox + hexNums[Math.floor(Math.random()*16)].toString();
+                console.log(textBox);
+            }
         document.getElementById(divs[i]).style.backgroundColor = textBox;
     }
 }
