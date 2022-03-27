@@ -28,6 +28,7 @@ function setRec(pos, rec, length) {
     var rec = document.getElementById(rec);
     var button = document.getElementById("#butt");
    
+    rec.style.top = (400 - height).toString() + "px";
     rec.style.height = length.toString() + "px";
     rec.style.left = pos.toString() + "px";
 }
@@ -39,8 +40,10 @@ function setPos(pos, rec){
     rec.style.left = pos.toString() + "px";
 }
 function initialize(){
+    var box = document.getElementById(divs[0]);
     for (var i = 0; i < 10; i++){
-        setRec(i * 100, divs[i], Math.floor(Math.random() * 290) + 10);
+        box = document.getElementById(divs[i]);
+        setRec(i * 100, divs[i], Math.floor(Math.random() * 290) + 10) ;
     }
 }
 
