@@ -89,3 +89,11 @@ function update() {
         setPos(i*100, divs[i]);
     }
 }
+
+function setColour(){
+    var textBox = document.getElementById("#colorInput").value;
+
+    for (var i = 0; i < 10; i++){
+        document.getElementById(divs[i]).style.backgroundColor = textBox;
+    }
+}
