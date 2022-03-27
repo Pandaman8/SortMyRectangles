@@ -70,7 +70,7 @@ function sort(rec1, rec2, count){
             recc = 0;
             recv = 1;
         }
-        setTimeout(function(){sort(recc, recv, counts); }, 1000);
+        setTimeout(function(){sort(recc, recv, counts); }, 500);
     }
 }
 
