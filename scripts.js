@@ -106,7 +106,6 @@ function randomizeColour(){
             textBox = "#";
             for(var j = 0; j < 6; j++){
                 textBox = textBox + hexNums[Math.floor(Math.random()*16)].toString();
-                console.log(textBox);
             }
         document.getElementById(divs[i]).style.backgroundColor = textBox;
     }
